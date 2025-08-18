@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Clock</title>
+
+  <!-- Optional: Google Font for heading -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+ 
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: white;
+    }
+
+    body {
+      background-image: url('background for clock.avif');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      font-family: 'Orbitron', cursive;
+      font-size: 64px;
+      margin: 30px 0 60px;
+      text-align: center;
+    }
+
+    .digital_clock {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    #time_box {
+      font-family: 'DS-Digital', monospace;
+      font-size: 80px;
+      color: red;
+      text-shadow: 0 0 10px red;
+      letter-spacing: 4px;
+    }
+
+    .date_box {
+      font-size: 28px;
+      margin-top: 20px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Digital Clock</h1>
+
+  <div class="digital_clock">
+    <div id="time_box">--:--:--</div>
+    <div id="date_box" class="date_box">Loading Date...</div>
+  </div>
+
+  <script>
+    // ✅ UPDATE CURRENT TIME
+    function updateTime() {
+      const now = new Date();
+      const hour = now.getHours().toString().padStart(2, "0");
+      const min = now.getMinutes().toString().padStart(2, "0");
+      const sec = now.getSeconds().toString().padStart(2, "0");
+
+      document.getElementById("time_box").textContent = `${hour} : ${min} : ${sec}`;
+    }
+
+    // ✅ UPDATE CURRENT DATE
+    function updateDate() {
+      const now = new Date();
+      const day = now.getDate().toString().padStart(2, "0");
+      const months = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ];
+      const monthName = months[now.getMonth()];
+      const year = now.getFullYear();
+
+      document.getElementById("date_box").textContent = `${day} - ${monthName} ${year}`;
+    }
+
+    // ✅ INITIAL DISPLAY
+    updateTime();
+    updateDate();
+
+    // 🔁 UPDATE TIME EVERY SECOND
+    setInterval(updateTime, 1000);
+  </script>
+
+  <!-- 📌 IMPORTANT POINTS TO REMEMBER:
+    1. new Date() → creates a date object with current date and time.
+    2. getHours(), getMinutes(), getSeconds() → get respective parts of time.
+    3. toString().padStart(2, '0') → ensures always two digits (like 09, 04).
+    4. getDate(), getMonth(), getFullYear() → get parts of the date.
+    5. setInterval(function, 1000) → calls a function every 1000ms (1 second) to keep updating the time.
+  -->
+</body>
+</html>
