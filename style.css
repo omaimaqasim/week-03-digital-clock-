@@ -1,47 +1,63 @@
 * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      color: white;
-    }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
 
-    body {
-      background-image: url('background for clock.avif');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+body {
+  background-image: url('background for clock.avif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
 
-    h1 {
-      font-family: 'Orbitron', cursive;
-      font-size: 64px;
-      margin: 30px 0 60px;
-      text-align: center;
-    }
+h1 {
+  font-family: 'Orbitron', cursive;
+  font-size: 64px;
+  margin: 30px 0 60px;
+  text-align: center;
+}
 
-    .digital_clock {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-    }
+.digital_clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: absolute;
+  top: 35%;
+}
 
-    #time_box {
-      font-family: 'DS-Digital', monospace;
-      font-size: 80px;
-      color: red;
-      text-shadow: 0 0 10px red;
-      letter-spacing: 4px;
-    }
+#time_box {
+  font-size: 80px;
+  color: red;
+  text-shadow: 0 0 10px red;
+  letter-spacing: 4px;
+    font-family: 'Orbitron', cursive;
+}
 
-    .date_box {
-      font-size: 28px;
-      margin-top: 20px;
-      font-family: 'Segoe UI', sans-serif;
-    }
-  
+.date_box {
+  font-size: 28px;
+  margin-top: 20px;
+  font-family: 'Orbitron', cursive;
+}
+
+.greeting {
+
+  border: solid red;
+    box-shadow: 0px 0px 14px red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  padding: 20px;
+  font-size: 28px;
+  border-radius: 12px;
+    font-family: 'Orbitron', cursive;
+}
