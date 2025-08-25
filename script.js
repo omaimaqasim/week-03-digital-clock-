@@ -84,3 +84,24 @@ greeting();     // Show greeting on page load
 // ✅ AUTO UPDATES
 // ---------------------------
 setInterval(updateTime, 1000); // Update time every second
+
+// add event to dark mode
+
+let dark_lightmode = document.querySelector(".darkMode")
+let darkModeBtn = document.querySelector(".darkMode i")
+dark_lightmode.addEventListener("click",()=>{
+
+    // If sun → change to moon
+  if (darkModeBtn.classList.contains("hgi-sun-02")) {
+    darkModeBtn.classList.remove("hgi-sun-02");
+    darkModeBtn.classList.add("hgi-moon-02");
+       document.body.style.backgroundColor = "black"
+  } 
+  // If moon → change back to sun
+  else {
+    darkModeBtn.classList.remove("hgi-moon-02");
+    darkModeBtn.classList.add("hgi-sun-02");
+    document.body.style.backgroundColor = "white"
+  }
+
+})

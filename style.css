@@ -2,48 +2,105 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: white;
+  
 }
 
+
+
+.nav{
+
+  height: 15vh;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+.darkMode{
+    position: relative; 
+  left: 70%;  
+  cursor: pointer;  
+  padding: 20px;    
+  
+}
+
+.hgi-moon-02 {
+  font-size: 50px; 
+  color: rgb(0, 0, 0);     
+}
+
+
+.hgi-moon-02:hover {
+  font-size: 51px; 
+  color: rgb(30, 29, 29);    
+}
+
+.hgi-sun-02 {
+  font-size: 50px; 
+  color: white !important;  /* force it to override */   
+}
+
+
+.hgi-sun-02:hover {
+  font-size: 51px; 
+  color: rgb(255, 255, 255);    
+}
+
+
+
+
+
 body {
-  background-image: url('background for clock.avif');
+  background-color: white;
+  /* background-image: url('background for clock.avif');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
+  background-color: black;
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+  color: white;
 }
+
+
 
 h1 {
   font-family: 'Orbitron', cursive;
-  font-size: 64px;
-  margin: 30px 0 60px;
+  font-size: 44px;
+  padding: 20px;
   text-align: center;
 }
 
 .digital_clock {
+      border: 2px solid #201f1ff1;
+    border-radius: 13px;
+   box-shadow:  0px 0px 8px 2px rgb(33, 32, 32);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 20px;
   position: absolute;
   top: 35%;
+
 }
 
 #time_box {
-  font-size: 80px;
+  font-size: 65px;
   color: red;
   text-shadow: 0 0 10px red;
   letter-spacing: 4px;
-    font-family: 'Orbitron', cursive;
+  font-family: 'Roboto Mono', monospace;
+  padding: 20px;
 }
 
 .date_box {
-  font-size: 28px;
+  font-size: 20px;
   margin-top: 20px;
   font-family: 'Orbitron', cursive;
 }
@@ -51,13 +108,21 @@ h1 {
 .greeting {
 
   border: solid red;
-    box-shadow: 0px 0px 14px red;
+  box-shadow: 0px 0px 14px red;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 20px;
   padding: 20px;
-  font-size: 28px;
+  margin-bottom: 30px;
+  font-size: 22px;
   border-radius: 12px;
-    font-family: 'Orbitron', cursive;
+  font-family: 'Orbitron', cursive;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+/* classes for darkmode and light mode */
+.invert {
+  color: invert(1);
 }
