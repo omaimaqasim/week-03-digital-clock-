@@ -5,39 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title> Digital Clock</title>
 
-  <!-- Optional: Google Font for heading -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 
- <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 
- <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-solid-rounded.css" />
-
- <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
-
-  
+  <!-- Huge Icons -->
+  <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-solid-rounded.css" />
+  <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
 </head>
 
 <body>
   <div class="nav">
     <h1> ⏰Digital Clock</h1>
     <div class="darkMode">
-      <i class="hgi hgi-stroke hgi-sun-02"></i>
-     
+      <i class="hgi hgi-stroke hgi-moon-02"></i> <!-- 🌙 starts in light mode -->
     </div>
-
   </div>
 
   <div class="digital_clock">
     <div id="time_box">--:--:--</div>
     <div id="date_box" class="date_box">Loading Date...</div>
-    <div class="greeting">
-      
-    </div>
+    <div class="greeting"></div>
   </div>
 
+  <script src="script.js"></script>
+</body>
+</html>
 
-    <script src="script.js"></script>
-
+  
   <!-- 📌 IMPORTANT POINTS TO REMEMBER:
     1. new Date() → creates a date object with current date and time.
     2. getHours(), getMinutes(), getSeconds() → get respective parts of time.
@@ -45,5 +41,3 @@
     4. getDate(), getMonth(), getFullYear() → get parts of the date.
     5. setInterval(function, 1000) → calls a function every 1000ms (1 second) to keep updating the time.
   -->
-</body>
-</html>

@@ -1,74 +1,91 @@
+/* ============================= */
+/* 🔹 RESET + GLOBAL STYLES       */
+/* ============================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
-
-
-.nav{
-
+/* ============================= */
+/* 🔹 NAVIGATION BAR              */
+/* ============================= */
+.nav {
   height: 15vh;
-  background-color: rgb(0, 0, 0);
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-
 }
-.darkMode{
-    position: relative; 
-  left: 70%;  
-  cursor: pointer;  
-  padding: 20px;    
-  
+
+.darkMode {
+  cursor: pointer;
+  padding: 20px;
+}
+
+.hgi-moon-02,
+.hgi-sun-02 {
+  font-size: 50px;
+  transition: all 0.3s ease;
 }
 
 .hgi-moon-02 {
-  font-size: 50px; 
-  color: rgb(0, 0, 0);     
+  color: black;
 }
 
-
 .hgi-moon-02:hover {
-  font-size: 51px; 
-  color: rgb(30, 29, 29);    
+  font-size: 52px;
+  color: rgb(30, 29, 29);
 }
 
 .hgi-sun-02 {
-  font-size: 50px; 
-  color: white !important;  /* force it to override */   
+  color: white;
 }
-
 
 .hgi-sun-02:hover {
-  font-size: 51px; 
-  color: rgb(255, 255, 255);    
+  font-size: 52px;
+  color: rgb(255, 255, 255);
 }
 
-
-
-
-
+/* ============================= */
+/* 🔹 THEME SETTINGS              */
+/* ============================= */
 body {
-  background-color: white;
-  /* background-image: url('background for clock.avif');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
-  background-color: black;
   width: 100vw;
   height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
+  justify-content: center;
+  color: black;
+  background-color: rgb(177 196 240);
+}
+
+body.dark-theme {
+  background-color: black;
   color: white;
 }
 
+.dark-theme .digital_clock {
+  box-shadow: 0px 0px 14px rgb(119, 58, 233);
+}
 
+.dark-theme .digital_clock,
+.dark-theme .greeting {
+  background-color: black;
+}
 
+.dark-theme #time_box {
+  color: rgb(111, 67, 193);
+}
+
+.dark-theme .greeting {
+  box-shadow: 0px 0px 14px rgb(119, 58, 233);
+}
+
+/* ============================= */
+/* 🔹 HEADING STYLE               */
+/* ============================= */
 h1 {
   font-family: 'Orbitron', cursive;
   font-size: 44px;
@@ -76,27 +93,28 @@ h1 {
   text-align: center;
 }
 
+/* ============================= */
+/* 🔹 DIGITAL CLOCK CONTAINER     */
+/* ============================= */
 .digital_clock {
-      border: 2px solid #201f1ff1;
-    border-radius: 13px;
-   box-shadow:  0px 0px 8px 2px rgb(33, 32, 32);
+  border-radius: 13px;
+  background-color: rgba(134, 118, 238, 0.316);
+  box-shadow: 0px 0px 8px 2px rgb(33, 32, 32);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  position: absolute;
-  top: 35%;
-
+  margin: 0 20px;
 }
 
 #time_box {
-  font-size: 65px;
-  color: red;
-  text-shadow: 0 0 10px red;
+  font-size: 60px;
+  color: rgb(0, 0, 0);
+  padding: 22px;
   letter-spacing: 4px;
-  font-family: 'Roboto Mono', monospace;
-  padding: 20px;
+  font-family: 'Orbitron', monospace;
+  font-variant-numeric: tabular-nums;
 }
 
 .date_box {
@@ -105,10 +123,12 @@ h1 {
   font-family: 'Orbitron', cursive;
 }
 
+/* ============================= */
+/* 🔹 GREETING MESSAGE            */
+/* ============================= */
 .greeting {
-
-  border: solid red;
-  box-shadow: 0px 0px 14px red;
+  box-shadow: 0px 0px 14px rgb(0, 0, 0);
+  background-color: rgba(134, 118, 238, 0.477);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,7 +142,46 @@ h1 {
   cursor: pointer;
 }
 
-/* classes for darkmode and light mode */
-.invert {
-  color: invert(1);
+/* ============================= */
+/* 🔹 RESPONSIVE DESIGN           */
+/* ============================= */
+@media (max-width: 720px) {
+  .nav h1 {
+    font-size: 30px;
+  }
+
+  .nav i {
+    font-size: 30px;
+  }
+
+  #time_box {
+    font-size: 32px;
+    padding: 12px;
+  }
+
+  .greeting {
+    font-size: 16px;
+    padding: 16px;
+  }
+
+  .date_box {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  #time_box {
+    font-size: 22px;
+    padding: 7px 12px;
+  }
+
+  .greeting {
+    font-size: 14px;
+    padding: 16px;
+    margin-bottom: 4px;
+  }
+
+  .date_box {
+    font-size: 12px;
+  }
 }
