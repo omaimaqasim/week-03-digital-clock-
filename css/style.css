@@ -59,6 +59,7 @@ body {
   justify-content: center;
   color: black;
   background-color: rgb(177 196 240);
+  transition : all 0.5s ease;
 }
 
 body.dark-theme {
@@ -115,6 +116,7 @@ h1 {
   letter-spacing: 4px;
   font-family: 'Orbitron', monospace;
   font-variant-numeric: tabular-nums;
+  transition: all 0.5s ease;
 }
 
 .date_box {
@@ -185,3 +187,11 @@ h1 {
     font-size: 12px;
   }
 }
+
+
+
+
+
+
+
+
