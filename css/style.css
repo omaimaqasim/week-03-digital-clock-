@@ -6,6 +6,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  position: relative;
+  height: 100vh;
+}
 
 /* ============================= */
 /* 🔹 NAVIGATION BAR              */
@@ -59,7 +63,7 @@ body {
   justify-content: center;
   color: black;
   background-color: rgb(177 196 240);
-  transition : all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 body.dark-theme {
@@ -125,6 +129,27 @@ h1 {
   font-family: 'Orbitron', cursive;
 }
 
+/* sidebar */
+
+.side_bar {
+  border: 2px solid black;
+  padding: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10%;
+  height: 100vh;
+}
+
+.side_bar>* {
+  border: 2px solid black;
+
+}
+.side_bar>* svg {
+  width: 64px;
+  height: 64px;
+}
+
 /* ============================= */
 /* 🔹 GREETING MESSAGE            */
 /* ============================= */
@@ -187,11 +212,3 @@ h1 {
     font-size: 12px;
   }
 }
-
-
-
-
-
-
-
-
