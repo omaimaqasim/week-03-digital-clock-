@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Orbitron, cursive;
 }
 
 
@@ -17,7 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: blue;
+    background-color: rgba(134, 118, 238, 0.316);
   margin-bottom: 30px;
   position: relative;
 
@@ -133,28 +134,39 @@ h1 {
 /* sidebar */
 
 .side_bar {
-  border: 2px solid black;
-  padding: 10px;
   position: fixed;
   left: 0;
-  top: 96px;
-  width: 12%;
+  top: 96px;  
+  width: 10%;
   height: 83%;
+      background-color: rgba(134, 118, 238, 0.316);
+}
+.side_bar>*:hover{
+      background-color: rgba(134, 118, 238, 0.38);
+}
+.side_bar>* h2{
+  font-size: 1rem;
 }
 
 .side_bar>* {
-  border: 2px solid black;
   display: flex;
+  cursor: pointer;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 12px;
+  gap: 10px;
+  padding: 15px;
 
 }
 
 .side_bar>* svg {
   width: 44px;
   height: 44px;
+}
+
+/* timer */
+.timer{
+  display: none;
 }
 
 /* ============================= */

@@ -78,3 +78,28 @@ dark_lightmode.addEventListener("click", () => {
   darkModeBtn.classList.toggle("hgi-sun-02");
   darkModeBtn.classList.toggle("hgi-moon-02");
 });
+
+
+// logic for timer_btn
+
+let timer_btn = document.querySelector(".timer_btn")
+let digital_clock = document.querySelector(".digital_clock")
+let clock_btn = document.querySelector(".clock_btn")
+let timer_div = document.querySelector(".timer");
+
+timer_btn.addEventListener("click",()=>{
+    digital_clock.style.display = "none";
+     timer_div.style.display = "flex";
+     timer_btn.style.backgroundColor = "rgba(134, 118, 238, 0.38)"
+       clock_btn.style.backgroundColor = "none"
+})
+
+clock_btn.addEventListener("click",()=>{
+       timer_div.style.display = "none";
+          digital_clock.style.display = "flex";
+           clock_btn.style.backgroundColor = "rgba(134, 118, 238, 0.38)"
+       timer_btn.style.backgroundColor = "none"
+
+
+})
+
